@@ -1,4 +1,4 @@
---              AstroNvim Configuration Table
+--mattn/emmet-vimmattn/emmet-vim              AstroNvim Configuration Table
 -- All configuration changes should go inside of the table below
 
 -- You can think of a Lua "table" as a dictionary like data structure the
@@ -290,6 +290,7 @@ local config = {
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       -- { "andweeb/presence.nvim" },
+      { "mattn/emmet-vim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
       --   event = "BufRead",
