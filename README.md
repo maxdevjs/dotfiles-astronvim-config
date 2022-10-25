@@ -36,5 +36,5 @@ $  git clone https://github.com/maxdevjs/dotfiles-astronvim-config $XDG_CONFIG_H
 
 [AstroNvim](https://github.com/AstroNvim/AstroNvim) is [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) licensed.
 
-This repo is under [The Unlicense (#Unlicense)](https://unlicense.org/), 
-compatible with the original(https://www.gnu.org/licenses/license-list.en.html#Unlicense).
+This repo is under [Unlicense Yourself: Set Your Code Free](https://unlicense.org/), 
+compatible with the original [License list on gnu.org - The Unlicense (#Unlicense)](https://www.gnu.org/licenses/license-list.en.html#Unlicense).
