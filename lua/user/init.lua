@@ -222,10 +222,15 @@ local config = {
       -- second key is the lefthand side of the map
       -- mappings seen under group name "Buffer"
       ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-      ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
-      ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
-      ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+      -- ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
+      -- ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
+      -- ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
+
+      -- https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/remap.lua
+      ['<leader>r'] = { ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+        desc = "Rename all occurrences of the word currently under the cursor" },
+      ['<leader>x'] = { "<cmd>!chmod +x %<CR>", desc = "Make the current file executable" },
 
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       [';'] = { ":", desc = "; to :" },
@@ -237,12 +242,19 @@ local config = {
       -- TODO: fix
       ['<A-k>'] = { ":m .-2<CR>==", desc = "Normal mode - Move the current line/selection up" },
 
+      -- Centered scroll
+      ['<C-d>'] = { "<C-d>zz", desc = "Centered <C-d>" },
+      ['<C-u>'] = { "<C-u>zz", desc = "Centered <C-u>" },
+
       -- Open the current file in the default program
       ['<C-x>'] = { ":!xdg-open %<CR>", desc = "Open the current file in the default program" },
 
       -- Control + a to select all file
       ['<C-a>'] = { "ggVG", desc = "Control + a to select all file" },
       ['<Esc>'] = { ":nohlsearch<cr>", desc = "Normal mode - Disable highlight" },
+
+      ['<leader>y'] = { "\"+y", desc = "Copy to system clipboard" },
+      ['<leader>Y'] = { "\"+Y", desc = "Copy to system clipboard" },
     },
     i = {
       ['-['] = { "- [ ] []()", desc = "- [ ] []()" },
@@ -273,11 +285,16 @@ local config = {
     },
     x = {
       -- Move selected line / block of text in visual mode
-      ['<A-j>'] = { ":m \'>+1<CR>gv-gv", desc = "Visual mode - Move the current line/selection down" },
+      ['<A-j>'] = { ":m \'>+1<CR>gv=gv", desc = "Visual mode - Move the current line/selection down" },
       ['<A-k>'] = { ":m \'<-2<CR>gv=gv", desc = "Visual mode - Move the current line/selection down" },
 
+      -- Substitute current visual block without loosing current paste buffer
+      ['<leader>p'] = { "\"_dP", desc = "Substitute current visual block without loosing current paste buffer" },
+
       -- Control + a to select all file
-      ['<C-a>'] = { "<Esc>ggVG", desc = "Control + a to select all file" },
+      ['<C-a>'] = { "<Esc>ggVG", desc = "<C-a> to select all file" },
+
+      ['<leader>y'] = { "\"+y", desc = "Copy to system clipboard" },
     },
   },
 
@@ -380,6 +397,7 @@ local config = {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- TODO: lua version
+    -- Visual hint for copied text
     vim.cmd [[
     augroup highlight_yank
         autocmd!

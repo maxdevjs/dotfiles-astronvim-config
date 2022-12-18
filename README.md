@@ -34,6 +34,18 @@ $  git clone https://github.com/maxdevjs/dotfiles-astronvim-config $XDG_CONFIG_H
 
 Check [Configuration Mechanism](https://astronvim.github.io/Configuration/config_mechanism) for details.
 
+## TODO
+
+### Check
+
+- [ ] [0 to LSP : Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE)
+- [ ] [ThePrimeagen/init.lua](https://github.com/ThePrimeagen/init.lua)
+- [ ] [VonHeikemen/lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
+
+### Config
+
+- [ ] check if copy to system clipboard is enabled by default
+
 ## License
 
 [AstroNvim](https://github.com/AstroNvim/AstroNvim) is [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) licensed.
