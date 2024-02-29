@@ -1,5 +1,10 @@
 # dotfiles-astronvim-config
 
+>>Disclaimer:
+>>[AstroNvim](https://github.com/AstroNvim/AstroNvim) did break a few times
+>>
+>>As I am lazy, I am curently testing a configuration based on the [LazyVim](https://github.com/LazyVim/LazyVim) starter template: [maxdevjs/dotfiles-lazyvim-config](https://github.com/maxdevjs/dotfiles-lazyvim-config)
+
 User configuration for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## What is this
